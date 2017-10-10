@@ -24,7 +24,7 @@ public class Robot extends IterativeRobot {
 	@Override
 	public void robotInit() {
 		//Jacob was here
-		// Trevor was here
+		// Trevor wasn't here
 		chooser.addDefault("Default Auto", defaultAuto);
 		chooser.addObject("My Auto", customAuto);
 		SmartDashboard.putData("Auto choices", chooser);
