@@ -24,7 +24,7 @@ public class Robot extends IterativeRobot {
 	@Override
 	public void robotInit() {
 		//Jacob was here
-		// Trevor wasn't here
+		//Trevor wasn't here
 		chooser.addDefault("Default Auto", defaultAuto);
 		chooser.addObject("My Auto", customAuto);
 		SmartDashboard.putData("Auto choices", chooser);
@@ -39,13 +39,13 @@ public class Robot extends IterativeRobot {
 	 *
 	 * You can add additional auto modes by adding additional comparisons to the
 	 * switch structure below with additional strings. If using the
-	 * SendableChooser make sure to add them to the chooser code above as well.
+	 * S
 	 */
 	@Override
 	public void autonomousInit() {
 		autoSelected = chooser.getSelected();
 		// autoSelected = SmartDashboard.getString("Auto Selector",
-		// defaultAuto);
+
 		System.out.println("Auto selected: " + autoSelected);
 	}
 
