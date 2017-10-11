@@ -1,19 +1,31 @@
 package org.usfirst.frc.team103.robot;
 
 import edu.wpi.first.wpilibj.command.Subsystem;
+import com.ctre.CANTalon;
+
 
 /**
  *
  */
 public class Drive extends Subsystem {
 
-    // Put methods for controlling this subsystem
-    // here. Call these from Commands.
-	//I put code here for fun
+	public static CANTalon FrontLeftDrive, 
+							FrontLeftSteer, 
+							FrontRightDrive, 
+							FrontRightSteer, 
+							BackLeftDrive, 
+							BackLeftSteer,
+							BackRightDrive,
+							BackRightSteer;
+	
+	
+	
+	@Override
+	protected void initDefaultCommand() {
+				
+	}
+	
 
-    public void initDefaultCommand() {
-        // Set the default command for a subsystem here.
-        //setDefaultCommand(new MySpecialCommand());
-    }
+
 }
 
