@@ -9,11 +9,11 @@ import com.ctre.CANTalon;
  */
 public class Drive extends Subsystem {
 
-	public static CANTalon FrontLeftDrive, 
-						   FrontLeftSteer, 
-						   FrontRightDrive, 
-						   FrontRightSteer, 
-						   BackLeftDrive, 
+	public static CANTalon FrontLeftDrive,
+						   FrontLeftSteer,
+						   FrontRightDrive,
+						   FrontRightSteer,
+						   BackLeftDrive,
 						   BackLeftSteer,
 						   BackRightDrive,
 						   BackRightSteer;
