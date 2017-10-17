@@ -25,6 +25,7 @@ public class RobotMap {
         driveLeftFront.reverseSensor(true);
         LiveWindow.addActuator("Drive", "LeftFrontDrive", driveLeftFront);
         
+        
         driveLeftRear = new CANTalon(11);
         driveLeftRear.setFeedbackDevice(FeedbackDevice.QuadEncoder);
         LiveWindow.addActuator("Drive", "LeftRearDrive", driveLeftRear);
