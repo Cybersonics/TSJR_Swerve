@@ -5,9 +5,6 @@ import com.ctre.CANTalon;
 
 
 
-/**
- *
- */
 public class Drive extends Subsystem {
 	
 	
