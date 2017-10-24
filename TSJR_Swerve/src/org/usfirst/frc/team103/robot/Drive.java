@@ -4,6 +4,7 @@ import edu.wpi.first.wpilibj.command.Subsystem;
 import com.ctre.CANTalon;
 
 
+
 /**
  *
  */
@@ -24,14 +25,9 @@ public class Drive extends Subsystem {
 		double D = forward + omega * WHEEL_BASE_WIDTH / 2;
 		double pi = Math.PI;
 		
-		
-		
 		//Wheel 2
 		double leftFrontSpeed = Math.hypot(B, D);
-		double leftFrontAngle = Math.atan2(B, D) * 180/pi;
-		
-		RobotMap.driveLeftFront.set(leftFrontSpeed);
-		
+		double leftFrontAngle = Math.atan2(B, D) * 180/pi;	
 		
 		//Wheel 1
 		double rightFrontSpeed = Math.hypot(B, C);
@@ -44,6 +40,11 @@ public class Drive extends Subsystem {
 		//Wheel 4
 		double rightRearSpeed = Math.hypot(A, C);
 		double rightRearAngle = Math.atan2(A, C) * 180/pi;
+		
+		RobotMap.driveLeftFront.set(leftFrontSpeed);
+		RobotMap.driveLeftRear.set(leftRearSpeed);
+		RobotMap.driveRightFront.set(rightFrontSpeed);
+		RobotMap.driveRightRear.set(rightRearSpeed);
 		
 	}
 	
