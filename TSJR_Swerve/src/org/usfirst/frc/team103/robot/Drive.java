@@ -46,6 +46,12 @@ public class Drive extends Subsystem {
 		RobotMap.driveRightFront.set(rightFrontSpeed);
 		RobotMap.driveRightRear.set(rightRearSpeed);
 		
+		RobotMap.steerLeftFront.set(leftFrontAngle);
+		RobotMap.steerLeftRear.set(leftRearAngle);
+		RobotMap.steerRightFront.set(rightFrontAngle);
+		RobotMap.steerRightRear.set(rightRearAngle);
+		
+		
 	}
 	
 	@Override
