@@ -4,6 +4,7 @@ import com.ctre.CANTalon;
 import com.ctre.CANTalon.FeedbackDevice;
 import com.ctre.CANTalon.TalonControlMode;
 
+import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 
 public class RobotMap {
@@ -18,6 +19,8 @@ public class RobotMap {
     public static CANTalon steerRightFront;
     public static CANTalon steerRightRear;
 	
+    public static Joystick leftJoy; 
+    public static Joystick rightJoy;
 	
 	public static void init(){
         driveLeftFront = new CANTalon(10);
@@ -72,6 +75,9 @@ public class RobotMap {
         steerRightRear.setAllowableClosedLoopErr(5);
         steerRightRear.changeControlMode(TalonControlMode.Position);
         LiveWindow.addActuator("Steer", "RightRearSteer", steerRightRear);
+        
+        leftJoy = new Joystick(0);
+        rightJoy = new Joystick(1);
 		
 		
 	}
