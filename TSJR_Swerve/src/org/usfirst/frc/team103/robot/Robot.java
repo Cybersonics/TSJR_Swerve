@@ -8,27 +8,18 @@ import org.usfirst.frc.team103.robot.Drive;
 
 
 public class Robot extends IterativeRobot {
-	final String defaultAuto = "Default";
-	final String customAuto = "My Auto";
-	String autoSelected;
-	SendableChooser<String> chooser = new SendableChooser<>();
 
 
 	@Override
 	public void robotInit() {
 		//Jacob was here
 		//Trevor wasn't here
-		chooser.addDefault("Default Auto", defaultAuto);
-		chooser.addObject("My Auto", customAuto);
-		SmartDashboard.putData("Auto choices", chooser);
+		
+		RobotMap.init();
 	}
 
 	@Override
 	public void autonomousInit() {
-		autoSelected = chooser.getSelected();
-		// autoSelected = SmartDashboard.getString("Auto Selector",
-
-		System.out.println("Auto selected: " + autoSelected);
 	}
 
 	
