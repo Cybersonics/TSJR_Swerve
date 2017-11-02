@@ -12,7 +12,7 @@ public class Drive extends Subsystem {
 	public static final double WHEEL_BASE_WIDTH = 22.0;
 	public static final double WHEEL_SPEED_MAXIMUM = 132.0; //11 * 12 (INCHES PER SECOND)
 	
-	public void swerveDrive(double strafe, double forward, double omega) {
+	public static void swerveDrive(double strafe, double forward, double omega) {
 		strafe *= WHEEL_SPEED_MAXIMUM;   //Converting velocity to inches per second.
 		forward *= WHEEL_SPEED_MAXIMUM;  // ^ 
 		//strafe = x | forward = y

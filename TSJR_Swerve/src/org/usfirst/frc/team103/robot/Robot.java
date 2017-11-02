@@ -4,6 +4,7 @@ import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import org.usfirst.frc.team103.robot.RobotMap;
+import org.usfirst.frc.team103.robot.Drive;
 
 
 public class Robot extends IterativeRobot {
@@ -40,9 +41,11 @@ public class Robot extends IterativeRobot {
 
 	@Override
 	public void teleopPeriodic() {
-		RobotMap.leftJoy.getRawAxis(0); //X-Axis
-		RobotMap.leftJoy.getRawAxis(1); //Y-Axis
-		RobotMap.rightJoy.getRawAxis(0);
+		RobotMap.leftJoy.getRawAxis(0); //X-Axis (strafe)
+		RobotMap.leftJoy.getRawAxis(1); //Y-Axis (forward)
+		RobotMap.rightJoy.getRawAxis(0); //X-Axis (omega)
+		
+		Drive.swerveDrive(RobotMap.leftJoy.getX(), RobotMap.leftJoy.getY(), RobotMap.rightJoy.getX());
 		
 		
 	}
