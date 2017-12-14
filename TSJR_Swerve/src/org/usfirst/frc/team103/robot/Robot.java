@@ -32,6 +32,7 @@ public class Robot extends IterativeRobot {
 
 	@Override
 	public void teleopPeriodic() {
+		//Not Actually needed here, defining each axis with corresponding variable.
 		RobotMap.leftJoy.getRawAxis(0); //X-Axis (strafe)
 		RobotMap.leftJoy.getRawAxis(1); //Y-Axis (forward)
 		RobotMap.rightJoy.getRawAxis(0); //X-Axis (omega)

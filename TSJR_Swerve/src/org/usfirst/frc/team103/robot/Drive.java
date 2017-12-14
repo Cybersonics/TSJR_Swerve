@@ -13,6 +13,7 @@ public class Drive extends Subsystem {
 	public static final double WHEEL_BASE_LENGTH = 27.0; //double unit in inches
 	public static final double WHEEL_BASE_WIDTH = 22.0;
 	public static final double WHEEL_SPEED_MAXIMUM = 132.0; //11 * 12 (INCHES PER SECOND)
+	//Robot goes 11 feet per second, converting it to inches per second ^
 	
 	public static void swerveDrive(double strafe, double forward, double omega) {
 		strafe *= -WHEEL_SPEED_MAXIMUM;   //Converting velocity to inches per second.
@@ -24,10 +25,10 @@ public class Drive extends Subsystem {
 		double C = forward - omega * WHEEL_BASE_WIDTH / 2;
 		double D = forward + omega * WHEEL_BASE_WIDTH / 2;
 		double pi = Math.PI;
-		
+		Math.atan2
 		//Wheel 2
 		double leftFrontSpeed = Math.hypot(B, D) / WHEEL_SPEED_MAXIMUM;
-		double leftFrontAngle = -(Math.atan2(B, D) * 180.0/pi +180.0) * 1024.0/360.0;	
+		double leftFrontAngle = -(Math.atan2(B, D) * 180.0/pi +180.0) * 1024.0/360.0;
 		
 		//Wheel 1
 		double rightFrontSpeed = Math.hypot(B, C) / WHEEL_SPEED_MAXIMUM;
@@ -40,6 +41,10 @@ public class Drive extends Subsystem {
 		//Wheel 4
 		double rightRearSpeed = Math.hypot(A, C) / WHEEL_SPEED_MAXIMUM; //Take all speeds
 		double rightRearAngle = -(Math.atan2(A, C) * 180.0/pi + 180.0) * 1024.0/360.0;
+		
+		if(leftFrontAngle) {
+			
+		}
 		
 		RobotMap.driveLeftFront.set(leftFrontSpeed);
 		RobotMap.driveLeftRear.set(leftRearSpeed);
